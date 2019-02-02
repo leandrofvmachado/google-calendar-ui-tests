@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf3e96c5-45bf-4311-90e9-c2a7cb524d42" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/page/Page.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/resources/feature.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/steps/FeatureSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/steps/Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/page/pages.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/page/pages.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/runners.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/page/pages.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/resources.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/steps.md" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,11 +20,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+            <state relative-caret-position="475">
+              <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/page/Page.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -56,7 +65,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/test/java/runners/runners.md" />
         <option value="$PROJECT_DIR$/src/test/java/resources/resources.md" />
@@ -70,10 +78,18 @@
         <option value="$PROJECT_DIR$/src/test/java/Utils.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestRunner.java" />
         <option value="$PROJECT_DIR$/src/test/java/steps/Utils.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="395" />
     <option name="y" value="1240" />
     <option name="width" value="1080" />
@@ -89,46 +105,46 @@
         <subPane>
           <expand>
             <path>
-              <item name="appium-cucumber-java-pattern" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appium-cucumber-java-pattern" type="462c0819:PsiDirectoryNode" />
+              <item name="google-calendar-ui-tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="google-calendar-ui-tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="appium-cucumber-java-pattern" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appium-cucumber-java-pattern" type="462c0819:PsiDirectoryNode" />
+              <item name="google-calendar-ui-tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="google-calendar-ui-tests" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="appium-cucumber-java-pattern" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appium-cucumber-java-pattern" type="462c0819:PsiDirectoryNode" />
+              <item name="google-calendar-ui-tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="google-calendar-ui-tests" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="appium-cucumber-java-pattern" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appium-cucumber-java-pattern" type="462c0819:PsiDirectoryNode" />
+              <item name="google-calendar-ui-tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="google-calendar-ui-tests" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="appium-cucumber-java-pattern" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appium-cucumber-java-pattern" type="462c0819:PsiDirectoryNode" />
+              <item name="google-calendar-ui-tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="google-calendar-ui-tests" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="page" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="appium-cucumber-java-pattern" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appium-cucumber-java-pattern" type="462c0819:PsiDirectoryNode" />
+              <item name="google-calendar-ui-tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="google-calendar-ui-tests" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="appium-cucumber-java-pattern" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appium-cucumber-java-pattern" type="462c0819:PsiDirectoryNode" />
+              <item name="google-calendar-ui-tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="google-calendar-ui-tests" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -237,10 +253,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="870" width="1920" height="1110" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="925" width="1920" height="1055" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17289221" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17449306" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -341,16 +356,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/page/Page.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/page/pages.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="503">
@@ -360,8 +365,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        <state relative-caret-position="475">
+          <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/page/Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
