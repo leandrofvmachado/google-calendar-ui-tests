@@ -8,7 +8,7 @@ import java.net.MalformedURLException;
 
 
 @CucumberOptions(
-        features = "src/test/java/resources/feature.feature", //path to your features
+        features = "src/test/java/resources/notes.feature", //path to your features
         glue = {"steps/"}, //path to your steps
         tags = {"~@Ignore"},
         format = {

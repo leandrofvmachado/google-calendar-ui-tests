@@ -19,6 +19,7 @@ import java.net.URL;
 public class Utils {
     public static AppiumDriver driver;
     protected String phoneType = "android";
+    int timeout = 10;
 
     public DesiredCapabilities setDesiredCaps(String phoneType){
         DesiredCapabilities caps = new DesiredCapabilities();
@@ -26,13 +27,13 @@ public class Utils {
             caps.setCapability("platformName", "Android"); //android or ios
             caps.setCapability("platformVersion", "8.0"); //OS version
             caps.setCapability("deviceName", "Android Emulator"); //any name
-            caps.setCapability("appWaitActivity", "app.wait.activity"); //first interactable activity of the application
+            caps.setCapability("appWaitActivity", "com.google.android.keep.activities.BrowseActivity"); //first interactable activity of the application
             caps.setCapability("autoGrantPermissions", "true");
             caps.setCapability("automationName", "UiAutomator2");
             caps.setCapability("skipDeviceInitialization", "true");
             caps.setCapability("skipServerInstallation", "true");
-            caps.setCapability("appPackage", "");
-            caps.setCapability("appActivity", "launchable.activity"); //launchable application of the app
+            caps.setCapability("appPackage", "com.google.android.keep");
+            caps.setCapability("appActivity", "com.google.android.keep.activities.BrowseActivity"); //launchable application of the app
             caps.setCapability("disableAndroidWatchers", "true");
             caps.setCapability("skipUnlock", "true");
             caps.setCapability("ignoreUnimportantViews", "true");
@@ -87,5 +88,9 @@ public class Utils {
 
         }
         getDriver().quit();
+    }
+
+    public int getTimeout(){
+        return timeout;
     }
 }
