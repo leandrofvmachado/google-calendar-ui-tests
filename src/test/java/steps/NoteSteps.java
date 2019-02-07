@@ -5,12 +5,14 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import page.DrawerPage;
 import page.NotePage;
 
 import static org.testng.AssertJUnit.assertTrue;
 
 public class NoteSteps {
     NotePage notePage = new NotePage();
+    DrawerPage drawerPage = new DrawerPage();
     String noteTitle, noteBody;
 
     @Given("^The user in the notes screen$")
@@ -65,7 +67,8 @@ public class NoteSteps {
 
     @Then("^The note is archived$")
     public void theNoteIsArchived() {
-        notePage.ch
+        drawerPage.accessArchiveScreen();
+        assertTrue(notePage.checkLastNoteByItsTitle(noteTitle).isDisplayed());
     }
 
 

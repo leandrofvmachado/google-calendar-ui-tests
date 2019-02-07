@@ -17,18 +17,17 @@ public class DrawerPage extends Utils {
     @AndroidFindBy(accessibility = "Open navigation drawer")
     WebElement navDrawer;
 
-    @AndroidFindBy(id = "menu_switch_to_list_view")
-    WebElement listViewIcon;
-
-
-
+    @AndroidFindBy(id = "browse_text_note")
+    List<WebElement> notesList;
 
     public DrawerPage(){
         PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(getTimeout())), this);
     }
 
-    public accessArchiveScreen(){
+    public void accessArchiveScreen(){
         navDrawer.click();
-
+        archive.click();
     }
+
+
 }
