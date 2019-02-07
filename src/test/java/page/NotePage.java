@@ -46,8 +46,13 @@ public class NotePage extends Utils {
     }
 
     public void ListView(){
-        if(listViewIcon.isDisplayed())
-            listViewIcon.click();
+        try{
+            if(listViewIcon.isDisplayed())
+                listViewIcon.click();
+        }
+        catch (Exception e){
+
+        }
     }
 
     public void openNoteEditor(){

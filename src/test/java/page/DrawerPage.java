@@ -11,7 +11,7 @@ import java.time.Duration;
 import java.util.List;
 
 public class DrawerPage extends Utils {
-    @AndroidFindBy(xpath = "//*[contains(@text, '//*[@resource-id=\"com.google.android.keep:id/drawer_navigation_archive\"]/android.widget.TextView[1]')]")
+    @AndroidFindBy(xpath = "//*[contains(@text, 'Archive')]")
     WebElement archive;
 
     @AndroidFindBy(accessibility = "Open navigation drawer")
@@ -28,6 +28,4 @@ public class DrawerPage extends Utils {
         navDrawer.click();
         archive.click();
     }
-
-
 }

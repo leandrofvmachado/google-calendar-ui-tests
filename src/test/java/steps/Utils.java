@@ -25,7 +25,7 @@ public class Utils {
         DesiredCapabilities caps = new DesiredCapabilities();
         if (phoneType.equals("android")) {
             caps.setCapability("platformName", "Android"); //android or ios
-            caps.setCapability("platformVersion", "8.0"); //OS version
+            caps.setCapability("platformVersion", "8.1.0"); //OS version
             caps.setCapability("deviceName", "Android Emulator"); //any name
             caps.setCapability("appWaitActivity", "com.google.android.keep.activities.BrowseActivity"); //first interactable activity of the application
             caps.setCapability("autoGrantPermissions", "true");
@@ -87,7 +87,7 @@ public class Utils {
             }
 
         }
-        getDriver().quit();
+        //getDriver().quit();
     }
 
     public int getTimeout(){
