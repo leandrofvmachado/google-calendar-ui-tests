@@ -6,6 +6,8 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import steps.Utils;
 
 import java.time.Duration;
@@ -15,17 +17,15 @@ public class NotePage extends Utils {
     @AndroidFindBy(xpath = "//*[contains(@text, 'Search your notes')]")
     @iOSXCUITFindBy(iOSNsPredicate = "label == \"screenTitle\"")
     WebElement searchYourNotes;
+    WebDriverWait wait = new WebDriverWait(getDriver(), 10);
 
     @AndroidFindBy(id = "new_note_button")
-    @iOSXCUITFindBy(iOSNsPredicate = "label == \"Take a note...\"")
     WebElement takeANote;
 
     @AndroidFindBy(id = "editable_title")
-    @iOSXCUITFindBy(iOSNsPredicate = "label == \"Take a note...\"")
     WebElement noteTitle;
 
     @AndroidFindBy(id = "edit_note_text")
-    @iOSXCUITFindBy(iOSNsPredicate = "label == \"Take a note...\"")
     WebElement noteBody;
 
     @AndroidFindBy(id = "menu_switch_to_list_view")
@@ -37,8 +37,17 @@ public class NotePage extends Utils {
     @AndroidFindBy(id = "menu_archive")
     WebElement archive;
 
+    @AndroidFindBy(id = "menu_reminder")
+    WebElement reminder;
+
+    @AndroidFindBy(id = "date_spinner")
+    WebElement reminderDate;
+
+    @AndroidFindBy(id = "time_spinner")
+    WebElement reminderTime;
+
     public NotePage(){
-        PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(getTimeout())), this);
+        PageFactory.initElements(new AppiumFieldDecorator(getDriver(), Duration.ofSeconds(getTimeout())), this);
     }
 
     public WebElement searchYourNotes(){
@@ -51,7 +60,7 @@ public class NotePage extends Utils {
                 listViewIcon.click();
         }
         catch (Exception e){
-
+            //TODO
         }
     }
 
@@ -68,6 +77,7 @@ public class NotePage extends Utils {
     }
 
     public void createNote(){
+        wait.until(ExpectedConditions.visibilityOf(noteBody));
         getDriver().navigate().back();
     }
 
@@ -80,4 +90,23 @@ public class NotePage extends Utils {
         archive.click();
     }
 
+    public void setReminder(String day, String time){
+        reminder.click();
+        reminderDate.click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(@text, '"+day+"')]"))).click();
+        reminderTime.click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(@text, '"+time+"')]"))).click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(@text, 'Save')]"))).click();
+    }
+
+    public boolean checkLastNoteByItsTitleAndReminder(String noteTitle, String day, String time){
+        String hourlyTime = "";
+        if(time.equals("Night"))
+            hourlyTime = "8:00 PM";
+
+        WebElement firstNote = notesList.get(0);
+
+        return firstNote.findElement(By.xpath("//*[contains(@text, '"+noteTitle+"')]")).isDisplayed() &&
+                firstNote.findElement(By.xpath("//*[contains(@text, '"+day+", "+ hourlyTime+"')]")).isDisplayed();
+    }
 }

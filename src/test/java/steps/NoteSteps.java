@@ -14,6 +14,7 @@ public class NoteSteps {
     NotePage notePage = new NotePage();
     DrawerPage drawerPage = new DrawerPage();
     String noteTitle, noteBody;
+    String reminderDay, reminderTime;
 
     @Given("^The user in the notes screen$")
     public void theUserInTheNotesScreen() {
@@ -71,5 +72,16 @@ public class NoteSteps {
         assertTrue(notePage.checkLastNoteByItsTitle(noteTitle).isDisplayed());
     }
 
+    @And("^Assign a reminder for \"([^\"]*)\" at \"([^\"]*)\"$")
+    public void assignAReminderForAt(String day, String time) {
+        reminderDay = day;
+        reminderTime = time;
+        notePage.setReminder(day, time);
+    }
 
+    @Then("^The note is created with a reminder$")
+    public void theNoteIsCreatedWithAReminder() {
+        notePage.createNote();
+        notePage.checkLastNoteByItsTitleAndReminder(noteTitle, reminderDay, reminderTime);
+    }
 }

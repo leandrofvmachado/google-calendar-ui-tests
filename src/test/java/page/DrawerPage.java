@@ -21,7 +21,7 @@ public class DrawerPage extends Utils {
     List<WebElement> notesList;
 
     public DrawerPage(){
-        PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(getTimeout())), this);
+        PageFactory.initElements(new AppiumFieldDecorator(getDriver(), Duration.ofSeconds(getTimeout())), this);
     }
 
     public void accessArchiveScreen(){

@@ -3,10 +3,10 @@ package steps;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.TouchAction;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterSuite;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -17,7 +17,7 @@ import java.net.URL;
 
 
 public class Utils {
-    public static AppiumDriver driver;
+    private static AppiumDriver driver;
     protected String phoneType = "android";
     int timeout = 10;
 
@@ -85,9 +85,12 @@ public class Utils {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
         }
-        //getDriver().quit();
+    }
+
+    @AfterSuite
+    public void closeDriver(){
+        getDriver().quit();
     }
 
     public int getTimeout(){
