@@ -51,6 +51,10 @@ public class NotePage extends Utils {
     }
 
     public WebElement searchYourNotes(){
+        int startX = (int) ((getDriver().manage().window().getSize().getWidth()));
+        int endX = (int) ((getDriver().manage().window().getSize().getHeight()));
+        System.out.println(startX);
+        System.out.println(endX);
         return searchYourNotes;
     }
 
