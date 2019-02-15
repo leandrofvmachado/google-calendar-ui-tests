@@ -1,8 +1,10 @@
 package page;
 
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
+import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -51,10 +53,14 @@ public class NotePage extends Utils {
     }
 
     public WebElement searchYourNotes(){
-        int startX = (int) ((getDriver().manage().window().getSize().getWidth()));
-        int endX = (int) ((getDriver().manage().window().getSize().getHeight()));
-        System.out.println(startX);
-        System.out.println(endX);
+        int centerX = ((getDriver().manage().window().getSize().getWidth())/2);
+        int centerY = (int) ((getDriver().manage().window().getSize().getHeight())/2);
+        TouchAction touch = new TouchAction(getDriver());
+        PointOption initialPoint = new PointOption();
+        PointOption finalPoint = new PointOption();
+        initialPoint.withCoordinates(centerX, centerY);
+        finalPoint.withCoordinates(centerX, (int)(centerY-200));
+        touch.longPress(initialPoint).moveTo(finalPoint).release().perform();
         return searchYourNotes;
     }
 
