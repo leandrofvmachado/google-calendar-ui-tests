@@ -58,12 +58,14 @@ public class ListPage extends Utils {
         closeEditTextListElement.click();
     }
 
-    public boolean checkMostRecentList(List<List<String>> itemList){
+    public List<WebElement> checkMostRecentList(List<List<String>> itemList){
         listNotesList.get(0).click();
 
-        return listElements.size() == 2 &&
-                listElements.get(0).findElement(By.xpath("//*[contains(@text, '"+ itemList.get(1).get(0) +"')]\"")).isDisplayed() &&
-                listElements.get(1).findElement(By.xpath("//*[contains(@text, '"+ itemList.get(1).get(1) +"')]\"")).isDisplayed() &&
-                wait.until(ExpectedConditions.stalenessOf(getDriver().findElement(By.xpath("//*[contains(@text, '"+ itemList.get(1).get(3) +"')]\""))));
+        return listElements;
     }
+
+    public boolean checkStaleness(String element){
+        return wait.until(ExpectedConditions.stalenessOf(getDriver().findElement(By.xpath("//*[contains(@text, '"+ element +"')]\""))));
+    }
+
 }

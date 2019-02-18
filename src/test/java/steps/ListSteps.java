@@ -5,6 +5,9 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import page.ListPage;
 import page.NotePage;
 
@@ -36,6 +39,11 @@ public class ListSteps {
     @Then("^The note list is created with the correct items$")
     public void theNoteListIsCreatedWithTheCorrectItems() {
         notePage.createNote();
-        assertTrue(listPage.checkMostRecentList(itemList));
+        //Nesse caso não foi possível trazer a lógica de negócio
+        List<WebElement> listElements = listPage.checkMostRecentList(itemList);
+        assertTrue(listElements.size() == 2 &&
+                listElements.get(0).findElement(By.xpath("//*[contains(@text, '"+ itemList.get(1).get(0) +"')]\"")).isDisplayed() &&
+                listElements.get(1).findElement(By.xpath("//*[contains(@text, '"+ itemList.get(1).get(1) +"')]\"")).isDisplayed());
+        assertTrue(listPage.checkStaleness(itemList.get(1).get(2)));
     }
 }

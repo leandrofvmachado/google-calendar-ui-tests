@@ -1,5 +1,5 @@
 Feature: Notes
-  @Ignore
+
   Scenario: Create a single note
     Given The user in the notes screen
     And The notes are in List View
@@ -7,7 +7,7 @@ Feature: Notes
     And  Assign "Test" to title
     And Assign "Test" to description
     Then The note is created
-@Ignore
+
   Scenario: Archive a note
     Given The user in the notes screen
     And The notes are in List View
